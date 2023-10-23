@@ -8,7 +8,7 @@ class FlightsController < ApplicationController
    def show
   end
 
-  
+
   def new
     @flight = Flight.new
   end
@@ -57,7 +57,7 @@ class FlightsController < ApplicationController
   end
 
   private
-    
+
     def set_flight
       @flight = Flight.find(params[:id])
     end

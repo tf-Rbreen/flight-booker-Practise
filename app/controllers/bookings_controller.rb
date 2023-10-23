@@ -1,9 +1,10 @@
-class BookingController < ApplicationController
+class BookingsController < ApplicationController
 
-    def index 
+    def index
         @bookings = Booking.all
+        @bookings = Booking.new
     end
-    
+
     def new
         @bookings = Booking.new
     end
@@ -18,7 +19,7 @@ class BookingController < ApplicationController
         format.json { render json: @booking.errors, status: :unprocessable_entity }
       end
     end
-  end 
+  end
 
   def destroy
     @booking.destroy!
